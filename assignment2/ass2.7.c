@@ -1,12 +1,22 @@
+//wap to find the first position in lsb
 #include<stdio.h>
 int main()
 {
-int n;
-printf("enter the number");
-scanf("%d",&n);
-if((n&1)==0)
-printf("%d is even",n);
-else
-printf("%d is odd",n);
-return 0;
-} 
+    int x, count=0;
+    printf("enter any number");
+    scanf("%d",x);
+    while(x!=0)
+       {
+        count++;
+        if(x&1 == 1)
+        {
+            break;
+        }
+        else
+        {
+            x=x>>1;
+        }
+       }
+       printf("first 1 from lsb is at %d",count);
+       return 0;
+}
